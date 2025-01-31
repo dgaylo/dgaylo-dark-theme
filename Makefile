@@ -7,15 +7,15 @@ VERSION := $(shell $(TOOLS_DIR)/getVersion.py $(SRC_DIR)/manifest.json)
 
 .PHONY: package upload
 
-package: $(BUILD_DIR)/package.tar
+package: $(BUILD_DIR)/package.zip
 
 # Upload to Mozilla for signing
-upload: $(BUILD_DIR)/package.tar
+upload: $(BUILD_DIR)/package.zip
 	@$(TOOLS_DIR)/upload.py $(JWT_ISSUER) $(JWT_SECRET) $(VERSION) $<
 
 # Create a tarball of the package
-$(BUILD_DIR)/package.tar: FORCE $(BUILD_DIR)
-	cd $(SRC_DIR) && tar -cf $@ *
+$(BUILD_DIR)/package.zip: FORCE $(BUILD_DIR)
+	cd $(SRC_DIR) && zip -FS $@ *
 
 # create the build directory
 $(BUILD_DIR):
