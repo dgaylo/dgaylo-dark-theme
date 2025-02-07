@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "0.2",
+  "version": "0.3",
   "name": "ChromeLikeDarkGray",
   "theme": {
     "colors": {
@@ -19,7 +19,9 @@
       "ntp_text": "rgb(200, 200, 200)",
       "popup_border": "rgba(32, 32, 32, 0.5)",
       "popup_highlight": "rgba(0, 120, 255, 0.5)",
-      "sidebar": "rgb(32, 32, 32)",
+      "sidebar": "rgb(60, 60, 60)",
+      "sidebar_text": "rgb(200, 200, 200)",
+      "sidebar_highlight": "rgba(0, 120, 255, 0.5)",
       "toolbar_field_border_focus": "rgba(0, 0, 0, 0)",
       "toolbar_field_highlight": "rgba(0, 120, 255, 0.5)",
       "toolbar_vertical_separator": "rgba(0, 0, 0, 0)",
