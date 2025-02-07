@@ -4,28 +4,28 @@
   "name": "ChromeLikeDarkGray",
   "theme": {
     "colors": {
-      "toolbar": "rgb(60, 60, 60)",
-      "toolbar_text": "rgb(200, 200, 200)",
       "frame": "rgb(32, 32, 32)",
-      "tab_background_text": "rgb(200, 200, 200)",
-      "toolbar_field": "rgb(32, 32, 32)",
-      "toolbar_field_text": "rgb(200, 200, 200)",
-      "tab_line": "rgba(0, 0, 0, 0.5)",
-      "popup": "rgb(32, 32, 32)",
-      "popup_text": "rgb(200, 200, 200)",
       "frame_inactive": "rgb(32, 32, 32)",
       "ntp_background": "rgb(60, 60, 60)",
       "ntp_card_background": "rgb(32, 32, 32)",
       "ntp_text": "rgb(200, 200, 200)",
+      "popup": "rgb(32, 32, 32)",
       "popup_border": "rgba(32, 32, 32, 0.5)",
       "popup_highlight": "rgba(0, 120, 255, 0.5)",
+      "popup_text": "rgb(200, 200, 200)",
       "sidebar": "rgb(60, 60, 60)",
-      "sidebar_text": "rgb(200, 200, 200)",
       "sidebar_highlight": "rgba(0, 120, 255, 0.5)",
+      "sidebar_text": "rgb(200, 200, 200)",
+      "tab_background_text": "rgb(200, 200, 200)",
+      "tab_line": "rgba(0, 0, 0, 0.5)",
+      "tab_loading": "rgba(0, 0, 0, 0.5)",
+      "toolbar": "rgb(60, 60, 60)",
+      "toolbar_field": "rgb(32, 32, 32)",
       "toolbar_field_border_focus": "rgba(0, 0, 0, 0)",
       "toolbar_field_highlight": "rgba(0, 120, 255, 0.5)",
-      "toolbar_vertical_separator": "rgba(0, 0, 0, 0)",
-      "tab_loading": "rgba(0, 0, 0, 0.5)"
+      "toolbar_field_text": "rgb(200, 200, 200)",
+      "toolbar_text": "rgb(200, 200, 200)",
+      "toolbar_vertical_separator": "rgba(0, 0, 0, 0)"
     }
   }
 }
