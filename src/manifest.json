@@ -30,7 +30,10 @@
       "toolbar_field_highlight": "rgba(0, 120, 255, 0.5)",
       "toolbar_field_text": "rgb(200, 200, 200)",
       "toolbar_text": "rgb(200, 200, 200)",
-      "toolbar_vertical_separator": "rgba(0, 0, 0, 0)"
+      "toolbar_vertical_separator": "rgba(0, 0, 0, 0)",
+
+      "icons": "rgb(200, 200, 200)",
+      "icons_attention": "rgb(200, 200, 200)"
     },
     "properties": {
       "color_scheme": "light"
