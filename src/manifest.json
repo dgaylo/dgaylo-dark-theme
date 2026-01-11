@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "version": "0.3",
-  "name": "ChromeLikeDarkGray",
+  "version": "0.2",
+  "name": "dgaylo-dark-theme",
   "theme": {
     "colors": {
       "frame": "rgb(32, 32, 32)",
@@ -31,6 +31,11 @@
       "toolbar_field_text": "rgb(200, 200, 200)",
       "toolbar_text": "rgb(200, 200, 200)",
       "toolbar_vertical_separator": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dark-theme@dgaylo.com"
     }
   }
 }
