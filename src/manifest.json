@@ -31,6 +31,10 @@
       "toolbar_field_text": "rgb(200, 200, 200)",
       "toolbar_text": "rgb(200, 200, 200)",
       "toolbar_vertical_separator": "rgba(0, 0, 0, 0)"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "auto"
     }
   },
   "browser_specific_settings": {
