@@ -21,7 +21,7 @@
       "sidebar_text": "rgb(200, 200, 200)",
 
       "tab_background_text": "rgb(200, 200, 200)",
-      "tab_line": "rgba(0, 0, 0, 0.5)",
+      "tab_line": "rgba(0, 0, 0, 0.0)",
       "tab_loading": "rgba(0, 0, 0, 0.5)",
       
       "toolbar": "rgb(60, 60, 60)",
