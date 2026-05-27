@@ -1,4 +1,5 @@
 import sys
+import os
 import time
 import secrets
 import requests
@@ -74,13 +75,13 @@ def version_create(uuid, add_on_id, headers):
     return json.loads(response.text)
 
 
-issuer = sys.argv[1]
-secret = sys.argv[2]
-add_on_id = sys.argv[3]
-file_path = sys.argv[4]
+add_on_id = sys.argv[1]
+file_path = sys.argv[2]
 
 headers = {
-    "Authorization": "JWT "+generate_token(issuer, secret)
+    "Authorization": "JWT "+generate_token(
+        issuer=os.environ['JWT_ISSUER'],
+        secret=os.environ['JWT_SECRET'])
 }
 
 

@@ -13,7 +13,7 @@ package: $(BUILD_DIR)/package.zip
 
 # Upload to Mozilla for signing
 upload: $(BUILD_DIR)/package.zip
-	python $(TOOLS_DIR)/upload.py $(JWT_ISSUER) $(JWT_SECRET) $(ADD_ON_ID) $<
+	python $(TOOLS_DIR)/upload.py $(ADD_ON_ID) $<
 
 # Create a tarball of the package
 $(BUILD_DIR)/package.zip: FORCE $(BUILD_DIR)
