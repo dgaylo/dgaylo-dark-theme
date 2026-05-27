@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "0.2",
+  "version": "0.3",
   "name": "dgaylo-dark-theme",
   "theme": {
     "colors": {
@@ -37,7 +37,7 @@
       "icons_attention": "rgb(200, 200, 200)"
     },
     "properties": {
-      "color_scheme": "light"
+      "color_scheme": "dark"
     }
   },
   "browser_specific_settings": {
