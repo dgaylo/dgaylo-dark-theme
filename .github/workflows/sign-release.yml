@@ -1,0 +1,37 @@
+name: Sign and attach theme
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write  # needed to upload a release asset
+
+jobs:
+  build:
+    environment: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Install zip
+        run: sudo apt-get update && sudo apt-get install -y zip
+
+      - name: Build and sign package
+        env:
+          JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+          JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+        run: make package
+
+      - name: Upload release asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ github.event.release.tag_name }} build/package.xpi
