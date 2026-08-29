@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "0.5",
+  "version": "0.6",
   "name": "dgaylo-dark-theme",
   "theme": {
     "colors": {
@@ -42,7 +42,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "dark-theme@dgaylo.com"
+      "id": "dark-theme@dgaylo.com",
+      "update_url": "https://dgaylo.github.io/dgaylo-dark-theme/updates.json"
     }
   }
 }

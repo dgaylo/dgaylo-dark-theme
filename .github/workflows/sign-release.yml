@@ -35,3 +35,33 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ github.event.release.tag_name }} build/package.xpi
+
+  update-manifest:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Build manifest
+        run: |
+          mkdir -p _site
+          VERSION=${{ github.event.release.tag_name }}
+          XPI_URL="https://github.com/${{ github.repository }}/releases/download/${VERSION}/package.xpi"
+          curl -sf "https://${{ github.repository_owner }}.github.io/$(basename ${{ github.repository }})/updates.json" \
+            -o _site/updates.json || echo '{"addons":{"dark-theme@dgaylo.com":{"updates":[]}}}' > _site/updates.json
+          jq --arg v "${VERSION#v}" --arg url "$XPI_URL" \
+             '.addons["dark-theme@dgaylo.com"].updates += [{"version": $v, "update_link": $url}]' \
+             _site/updates.json > _site/updates.json.tmp
+          mv _site/updates.json.tmp _site/updates.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
