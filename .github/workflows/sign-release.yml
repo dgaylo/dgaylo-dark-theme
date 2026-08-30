@@ -51,7 +51,7 @@ jobs:
           mkdir -p _site
           VERSION=${{ github.event.release.tag_name }}
           XPI_URL="https://github.com/${{ github.repository }}/releases/download/${VERSION}/package.xpi"
-          curl -sf "https://${{ github.repository_owner }}.github.io/$(basename ${{ github.repository }})/updates.json" \
+          curl -sf "https://dark-theme.dgaylo.com/updates.json" \
             -o _site/updates.json || echo '{"addons":{"dark-theme@dgaylo.com":{"updates":[]}}}' > _site/updates.json
           jq --arg v "${VERSION#v}" --arg url "$XPI_URL" \
              '.addons["dark-theme@dgaylo.com"].updates += [{"version": $v, "update_link": $url}]' \
