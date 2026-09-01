@@ -6,9 +6,11 @@ ADD_ON_ID ?= dark-theme@dgaylo.com
 
 SRC_FILES := $(shell find $(SRC_DIR) -type f)
 
-.PHONY: package clean
+.PHONY: package test clean
 
 package: $(BUILD_DIR)/package.xpi
+
+test: $(BUILD_DIR)/package.zip
 
 # Upload to Mozilla for signing
 $(BUILD_DIR)/%.xpi: $(BUILD_DIR)/%.zip
