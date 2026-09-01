@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "0.9",
+  "version": "0.10",
   "name": "dgaylo-dark-theme",
   "theme": {
     "colors": {
@@ -14,18 +14,23 @@
       "popup": "rgb(32, 32, 32)",
       "popup_border": "rgba(32, 32, 32, 0.5)",
       "popup_highlight": "rgba(0, 120, 255, 0.5)",
+      "popup_highlight_text": "rgb(200, 200, 200)",
       "popup_text": "rgb(200, 200, 200)",
 
       "sidebar": "rgb(60, 60, 60)",
       "sidebar_highlight": "rgba(0, 120, 255, 0.5)",
+      "sidebar_highlight_text": "rgb(200, 200, 200)",
       "sidebar_text": "rgb(200, 200, 200)",
 
+      "tab_selected": "rgb(60, 60, 60)",
+      "tab_text": "rgb(200, 200, 200)",
       "tab_background_text": "rgb(200, 200, 200)",
       "tab_line": "rgba(0, 0, 0, 0.0)",
       "tab_loading": "rgba(0, 0, 0, 0.5)",
       
       "toolbar": "rgb(60, 60, 60)",
       "toolbar_field": "rgb(32, 32, 32)",
+      "toolbar_field_border": "rgba(0, 0, 0, 0)",
       "toolbar_field_border_focus": "rgba(0, 0, 0, 0)",
       "toolbar_field_highlight": "rgba(0, 120, 255, 0.5)",
       "toolbar_field_text": "rgb(200, 200, 200)",
@@ -34,7 +39,7 @@
       "toolbar_bottom_separator": "rgb(32, 32, 32)",
 
       "icons": "rgb(200, 200, 200)",
-      "icons_attention": "rgb(200, 200, 200)"
+      "icons_attention": "rgb(90, 140, 190)"
     },
     "properties": {
       "color_scheme": "dark"
